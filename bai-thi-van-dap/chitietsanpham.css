@@ -1,0 +1,58 @@
+body{
+    height: 1500px;
+}
+.container{
+    width: 1300px;
+    margin: 0 auto;
+}
+.amount input[type=text]{
+    width: 50px;
+    text-align: center;
+    padding: 5px 10px 4px;
+}
+.amount input[type=button]{
+    font-size: 15px;
+}
+.except{
+    padding: 4px 10px;
+}
+.add{
+    padding: 3px 9px 4px;
+}
+.father-chitietsanpham{
+    display: flex;
+}
+.content-chitietsanpham {
+    margin-top: 60px;
+    padding-left: 60px;
+    width: 510px;
+}
+.general-use {
+    margin-top: 30px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 30px;
+}
+.content-infor{
+    border-bottom: 1px solid #111;
+    padding-bottom: 30px;
+}
+.content-size{
+    border-bottom: 1px solid #111;
+    padding-bottom: 30px;
+}
+.content-refund{
+    border-bottom: 1px solid #111;
+    padding-bottom: 30px;
+}
+.buttonadd button[type=submit]{
+    width: 250px;
+    padding: 12px 20px;
+    background-color: #47474c;
+    color: #fff;
+    border: none;
+}
+.buttonadd button[type=submit]:hover{
+    background-color: #111;
+    color: #fff;
+    transition: all 0.8s ease-in-out;
+}

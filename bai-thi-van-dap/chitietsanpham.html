@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+    integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chitietsanpham.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <section id="chitietsanpham">
+        <div class="father-chitietsanpham container">
+            <div class="child-chitietsanpham ">
+                <img src="da-cap/img/tee/LEVENTS 1 MILLION TEE.jpg" alt="LEVENTS" width="700px">
+            </div>
+            <div class="content-chitietsanpham">
+                <h1 class="name">LEVENTS® MELT FACE TEE</h1>
+                <h3 class="price">390,000 vnđ</h3>
+                <form action="">
+                    <label for="size">Size:</label>
+                    <br><br>
+                    <select name="size" id="size" >
+                        <option value="">Chọn size</option>
+                        <option value="size1">Size 1</option>
+                        <option value="size2">Size 2</option>
+                        <option value="size3">Size 3</option>
+                    </select>
+                </form>
+                <br>
+                <div class="amount">
+                    <input type="button" onclick="handelexecpt()" value="-" class="except">
+                    <input type="text" id="quantity" value="1">
+                    <input type="button" onclick="handelplus()" value="+" class="add">
+                </div>
+                <br>
+                <div class="buttonadd"><button type="submit" onclick="get_button()">Thêm vào giỏ </button></div>
+                <p id="notify"></p>
+                <!-- <p id="quantity">1</p> -->
+                <div class="infor general-use">Thông tin</div> 
+                <p class="content-infor contentchung">
+                    LEVENTS® | DORAEMON POPULAR CAT TEE
+
+                    MATERIAL: LÌ VEN ORIGINAL – Phiên bản bề mặt vải không đổ lông mang cảm giác thoáng mát
+                    SIZE: 1/2/3/4
+
+                    Sản phẩm thuộc Special Collection “Make everything popular” DORAEMON | LEVENTS®
+                </p>
+                <div class="table-size general-use">Bảng size</div>
+                <p class="content-size contentchung">
+                    Form áo được Fit size theo form và tiêu chuẩn tương đối của người Việt Nam,<br>nếu bạn đang cân nhắc
+                    giữa hai size, nên chọn size lớn hơn.
+                    <br><br>
+                    Size 1: Chiều cao từ 1m50 – 1m65, cân nặng trên 55kg<br>
+                    Size 2: Chiều cao từ 1m65 – 1m72, cân nặng dưới 65kg<br>
+                    Size 3: Chiều cao từ 1m70 – 1m77, cân nặng dưới 80kg<br>
+                    Size 4: Chiều cao trên 1m72, cân nặng dưới 95kg.
+                    <img src="img/bangsize.png" alt="">
+                </p>
+                <div class="refund general-use"">Quy định đổi trả</div>
+                <p class="content-refund contentchung">
+                    Nhằm mang lại cho bạn sự tiện lợi và những trải nghiệm tuyệt vời khi mua hàng, tụi mình đã phát
+                    triển dịch vụ đổi hàng tận nơi và chính sách bảo hành.
+                    <br><br>
+                    Tham khảo thêm thông tin về chính sách <a href="#">Tại đây</a>
+                    </p>
+                </div>
+            </div>
+    </section>
+    <script>
+        //thong tin 
+        $(document).ready(function () {
+            $(".infor").click(function () { 
+                $(".content-infor").slideToggle("slow"); 
+            });
+        });
+        //size
+        $(document).ready(function () {
+            $(".table-size").click(function () { 
+                $(".content-size").slideToggle(1000); 
+            });
+        }); 
+        $(document).ready(function () {
+            $(".refund").click(function () { 
+                $(".content-refund").slideToggle(1000); 
+            });
+        });     
+    </script>
+    <script>
+        let amountelement=document.getElementById('quantity')
+        let amount=amountelement.value;
+        let render=(amout)=>{
+            amountelement.value=amount;
+        }
+        let handelplus = ()=>{
+            amount++;
+            render(amount);
+        }
+        let handelexecpt=()=>{
+            if(amount>1){
+                amount--;
+                render(amount);
+            }
+        }
+        amountelement.addEventListener('input',()=>{
+            amount=amountelement.value;
+            amount=parseInt(amount);
+            amount=isNaN(amount)?1:amount;
+            render(amount);
+            console.log(amount);
+        });
+    </script>
+    <script>
+        function get_button(){
+            var size=document.getElementById('size').value;
+            if(size==""){
+                document.getElementById('notify').innerHTML="bạn chưa chọn size";
+            }
+            else if(size=='size1'){
+                document.getElementById('notify').innerHTML="bạn đã chọn size 1";
+            }
+            else if(size=='size2'){
+                document.getElementById('notify').innerHTML="bạn đã chọn size 2";
+            }
+            else if(size=='size3'){
+                document.getElementById('notify').innerHTML="bạn đã chọn size 3";
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

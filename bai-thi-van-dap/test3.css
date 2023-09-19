@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 1000px;
+}
+
+ul {
+  list-style: none;
+}
+.container{
+  width: 1300px;
+  margin: 0 auto;
+}
+.menu-main {
+  display: flex;
+  padding: 20px 0px;
+}
+.menu-main a {
+  padding: 20px;
+  text-decoration: none;
+}
+.menu-child-sticky {
+  background-color: bisque;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+}
+.content-side-bar {
+  position: relative;
+  width: 100%;
+  padding: 3rem;
+}
+.content-shirt {
+  display: flex;
+}
+.inner-side-bar {
+  display: flex;
+  justify-content: space-between
+}
+.img-content {
+  position: relative;
+  padding: 0px 50px;
+}
+.content-side-bar::before{
+  content: "";
+  background-color: #f47916;
+  position: absolute;
+  width: 120%;
+  top: -1%;
+  left: -22%;
+  bottom: 0px;
+  z-index: -1;
+}
+ul#content-ul-side-bar {
+  position: sticky;
+  top: 85px;
+}
+
+
+
+/* ===footer=== */
+.inner-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.Top h1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-color: black;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+.left ul {
+  display: flex;
+  /*Phân chia cùng 1 hàng*/
+  list-style: none;
+  /*Xóa kí tự*/
+  padding-left: 0px;
+}
+.left li {
+  font-size: 30px;
+  padding: 0px 20px 0px 0px;
+  /* Top, left, bot, right*/
+}
+.left a {
+  text-decoration: none;
+  color: black;
+}
+#DK {
+  background-color: #ffffff;
+  border-style: double;
+}
+.center ul {
+  font-size: 18px;
+  padding-left: 0px;
+  list-style: none;
+  font-weight: bold; /*Độ đậm của chữ*/
+}
+.center li {
+  padding: 5px 0px;
+}
+.right a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* footer#end-footer {
+  margin-top: 80px;
+} */
+.footer-text {
+  margin: 30px;
+}
+.footer-h3 {
+  padding-bottom: 20px;
+}
+.padding {
+  padding-top: 20px;
+}
+.padding input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #111;
+}
+.padding button {
+  padding: 10px 15px;
+  color: #fff;
+  border: 1px solid #111;
+  margin-left: -5px;
+  background-color: #111;
+}
+
+
+

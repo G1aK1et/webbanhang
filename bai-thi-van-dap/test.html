@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <<select name="size" id="size">
+        <option value="">Chọn size</option>
+        <option value="size1">Size 1</option>
+        <option value="size2">Size 2</option>
+        <option value="size3">Size 3</option>
+    </select>
+    <div class="buttonadd">
+        <button type="submit" onclick="clickbutton()">thêm vào giỏ </button>
+        <p id="notify"></p>
+    <script>
+        function clickbutton() {
+            var SIZE = document.getElementById('size').value;
+            if (SIZE ===null) {
+                document.getElementById('notify').innerHTML = "bạn chưa có giỏ hàng";
+            } else {
+                window.location="https://www.google.com.vn/imgres?imgurl=https%3A%2F%2Fvtv1.mediacdn.vn%2Fthumb_w%2F640%2F2021%2F1%2F30%2Fphoto-1-16119980134851020559896.png&imgrefurl=https%3A%2F%2Fvtv.vn%2Fvan-hoa-giai-tri%2Fnhung-thuong-hieu-hoat-hinh-ket-noi-cac-the-he-trong-gia-dinh-20210130161658178.htm&tbnid=-4PFIIFRfhzA7M&vet=12ahUKEwjmiaTi7sr7AhWfzosBHVcDCYsQMygCegUIARC-AQ..i&docid=AERTWWPiNCEF3M&w=640&h=443&q=ho%E1%BA%A1t%20hinh&ved=2ahUKEwjmiaTi7sr7AhWfzosBHVcDCYsQMygCegUIARC-AQ"
+            }
+        }
+    </script>
+</body>
+
+</html>

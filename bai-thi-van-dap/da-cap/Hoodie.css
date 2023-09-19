@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  height: 1500px;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+/* .menu-top {
+  border-bottom: 1px solid #99999996;
+} */
+.menu-top-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner-menu-top-one {
+  display: flex;
+}
+p.name {
+  align-items: center;
+  padding: px 0px;
+  padding-top: 30px;
+  font-size: 20px;
+}
+.name {
+  font-family: "Kanit", sans-serif;
+}
+.inner-menu-top-icon ul {
+  display: flex;
+}
+.inner-menu-top-icon li {
+  padding: 5px 20px;
+}
+.justify-span {
+  padding: 10px 100px;
+}
+.marquee {
+  background-color: black;
+  color: #fff;
+  animation: scorlling 10s linear infinite;
+}
+
+/* ===menu-sticky=== */
+.inner-menu-sticly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+.menu-child-sticky .menu-main {
+  display: flex;
+}
+.menu-main li {
+  position: relative;
+}
+.menu-main li a {
+  text-decoration: none;
+  padding: 20px 35px 20px 0px;
+  color: #111;
+  display: block;
+}
+.menu-main .menu-child {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px 0px;
+  left: 38px;
+  display: none;
+}
+.menu-main li:hover > ul.menu-child {
+  display: block;
+}
+.menu-main .menu-child a {
+  width: 150px;
+  padding: 15px;
+  border: 1px solid rgb(193, 193, 193);
+  border-bottom: 1px solid rgb(193, 193, 193);
+}
+/* .menu-main .menu-child li:last-child a {
+  border-bottom: none;
+} */
+.main-menu .main-menucon {
+  left: 130px;
+}
+.menu-main li.has-child::after {
+  font: var(--fa-font-solid);
+  content: "\f0d7";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.menu-main li.has-child:hover {
+  color: #1e90ff;
+}
+.menu-main li.has-child .menu-child li a:hover {
+  color: #1e90ff;
+}
+.menu-main li:hover > a {
+  color: #1e90ff;
+}
+
+/* ===menu-search=== */
+input[type="text"] {
+  padding: 8px 10px;
+  width: 300px;
+}
+button.button1 {
+  padding: 10px 10px;
+  margin-left: -5px;
+  border-radius: 0px 5px 5px 0px;
+  background-color: #999;
+  color: #fff;
+  border: 1px solid #999;
+}
+header {
+  position: sticky;
+  width: 100%;
+  /* transition: all 0.9s ease-in-out; */
+  border-bottom: 1px solid #99999996;
+  background-color: #fff;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid#99999996;
+  padding: 0px 0px;
+  background-color: #fff;
+  z-index: 10;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
+.container2 {
+  width: 1500px;
+  margin: 0 auto;
+}
+.inner-side-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.content-side-bar {
+  position: relative;
+  width: 100%;
+}
+.content-side-bar::before {
+  content: "";
+  position: absolute;
+  background-color: #f47916;
+  width: 120%;
+  top: -1%;
+  left: -20%;
+  bottom: 0;
+  z-index: -1;
+}
+.content-shirt {
+  display: flex;
+  justify-content: space-around;
+}
+.img-content {
+  padding: 50px 5px;
+}
+ul.content-ul-side-bar li {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+ul.content-ul-side-bar a {
+  text-decoration: none;
+  color: #111;
+  font-size: 18px;
+  font-weight: 700;
+}
+ul.content-ul-side-bar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 100px;
+  margin-bottom: 30px;
+}
+
+/* pre<->next */
+
+div#pagination {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  top: -20px;
+}
+div#pagination a {
+  text-decoration: none;
+  color: #111;
+}
+span.page-node.current {
+  border: 1px solid #111;
+  padding: 3px;
+  /* font-weight: 600; */
+  background-color: #111;
+  color: #fff;
+}
+
+/* ===footer=== */
+.inner-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.Top h1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-color: black;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+.left ul {
+  display: flex;
+  /*Phân chia cùng 1 hàng*/
+  list-style: none;
+  /*Xóa kí tự*/
+  padding-left: 0px;
+}
+.left li {
+  font-size: 30px;
+  padding: 0px 20px 0px 0px;
+  /* Top, left, bot, right*/
+}
+.left a {
+  text-decoration: none;
+  color: black;
+}
+#DK {
+  background-color: #ffffff;
+  border-style: double;
+}
+.center ul {
+  font-size: 18px;
+  padding-left: 0px;
+  list-style: none;
+  font-weight: bold; /*Độ đậm của chữ*/
+}
+.center li {
+  padding: 5px 0px;
+}
+.right a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-text {
+  margin: 30px;
+}
+.footer-h3 {
+  padding-bottom: 20px;
+}
+.padding {
+  padding-top: 20px;
+}
+.padding input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #111;
+}
+.padding button {
+  padding: 10px 15px;
+  color: #fff;
+  border: 1px solid #111;
+  margin-left: -5px;
+  background-color: #111;
+}
